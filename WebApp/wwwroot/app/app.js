@@ -1,14 +1,14 @@
-﻿var app = angular.module('AngularJSApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'ngSanitize', 'ngAnimate']).config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
-	cfpLoadingBarProvider.includeSpinner = false;
+﻿var app = angular.module('AngularJSApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'dx', 'ngSanitize', 'ngAnimate']).config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.includeSpinner = false;
 }]);
 
 app.config(function ($routeProvider) {
 
 
-	$routeProvider.when("/Login", {
-		controller: "LoginController",
-		templateUrl: "app/views/Login.html"
-	});
+    $routeProvider.when("/Login", {
+        controller: "LoginController",
+        templateUrl: "app/views/Login.html"
+    });
 
 });
 
@@ -28,12 +28,12 @@ app.run(['$rootScope', '$location', '$window', function ($rootScope, $location, 
 
 
 
-	//////////////////////////
-	//$rootScope.serviceUrl = serviceBase;
-	//$rootScope.$on('$viewContentLoaded', function () {
+    //////////////////////////
+    //$rootScope.serviceUrl = serviceBase;
+    //$rootScope.$on('$viewContentLoaded', function () {
 
 
-	//});
+    //});
 
 
 }]);
